@@ -3,21 +3,23 @@ import Hola from './src/Components/Hola';
 import InputCustom from './src/Components/InputCustom';
 import {View, Text, Image, ScrollView, TextInput} from 'react-native';
 
-const stylesCustomText = {
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  marginTop: '2%',
-  color: 'red',
-  textTransform: 'uppercase',
-  fontWeight: '700',
-  fontSize: 20,
+type CatProps = {
+  name: string;
 };
 
 function App(): JSX.Element {
+  const stylesCustomText = {
+    color: 'blue',
+    fontWeight: '700',
+    fontSize: 20,
+    textAlign: 'center',
+    marginBottom: '4%',
+  };
+
   return (
     <ScrollView>
       <Hola />
-      <InputCustom />
+      <InputCustom object={stylesCustomText} />
     </ScrollView>
   );
 }

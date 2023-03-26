@@ -1,19 +1,14 @@
 import React from 'react';
 import {View, Text, Image, ScrollView, TextInput} from 'react-native';
 
-const InputCustom = () => {
+type CustomProps = {
+  object: object;
+};
+
+const InputCustom = (props: CustomProps) => {
   return (
     <View>
-      <Text
-        style={{
-          color: 'blue',
-          fontWeight: '700',
-          fontSize: 20,
-          textAlign: 'center',
-          marginBottom: '4%',
-        }}>
-        Ingrese su nombre
-      </Text>
+      <Text style={props.object}>Ingrese su nombre</Text>
       <TextInput
         style={{
           marginLeft: 'auto',
