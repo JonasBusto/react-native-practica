@@ -1,11 +1,8 @@
 import React from 'react';
 import Hola from './src/Components/Hola';
 import InputCustom from './src/Components/InputCustom';
+import Counter from './src/Components/Counter';
 import {View, Text, Image, ScrollView, TextInput} from 'react-native';
-
-type CatProps = {
-  name: string;
-};
 
 function App(): JSX.Element {
   const stylesCustomText = {
@@ -20,6 +17,7 @@ function App(): JSX.Element {
     <ScrollView>
       <Hola />
       <InputCustom object={stylesCustomText} />
+      <Counter />
     </ScrollView>
   );
 }

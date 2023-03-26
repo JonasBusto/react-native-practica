@@ -1,17 +1,8 @@
 import React, {useEffect, useState, CSSProperties} from 'react';
-import {
-  View,
-  Button,
-  Pressable,
-  Text,
-  Image,
-  ScrollView,
-  TextInput,
-  Platform,
-} from 'react-native';
+import {View, Pressable, Text, Image} from 'react-native';
 
 const styleButton = {
-  backgroundColor: 'green',
+  backgroundColor: 'yellow',
   width: 150,
   marginLeft: 'auto',
   marginRight: 'auto',
@@ -45,10 +36,11 @@ const Hola = () => {
       <Pressable style={styleButton} onPress={() => changeIcon()}>
         <Text
           style={{
-            color: '#fff',
+            color: 'black',
             marginLeft: 'auto',
             marginRight: 'auto',
             textTransform: 'uppercase',
+            fontWeight: '600',
           }}>
           Cambiar icono
         </Text>
