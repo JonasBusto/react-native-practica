@@ -9,13 +9,38 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-type CustomProps = {
-  object: object;
+const Login = ({navigation}: any) => {
+  return (
+    <View style={authStyle.backImgCustom}>
+      <View style={authStyle.authContainer}>
+        <Text style={authStyle.authTitle}>Autenticación</Text>
+        <TextInput
+          style={authStyle.authInput}
+          placeholder="Correo Electronico"
+          keyboardType="email-address"
+        />
+        <TextInput
+          style={authStyle.authInput}
+          placeholder="Contraseña"
+          keyboardType="visible-password"
+        />
+        <TouchableOpacity style={authStyle.authButton} onPress={() => {}}>
+          <Text style={authStyle.authButtonText}>Iniciar Sesión</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={authStyle.btnRegister}
+          onPress={() => navigation.navigate('Register')}>
+          <Text style={authStyle.authButtonText}>O registrate aquí</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 };
 
 const authStyle = StyleSheet.create({
   backImgCustom: {
     width: '100%',
+    height: '100%',
     borderColor: 'gray',
     borderTopWidth: 1,
     backgroundColor: 'rgba(73,171,255,1)',
@@ -64,29 +89,16 @@ const authStyle = StyleSheet.create({
     color: 'white',
     textTransform: 'uppercase',
   },
+  btnRegister: {
+    backgroundColor: 'rgba(139,213,13,1)',
+    width: '50%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: '5%',
+    marginBottom: '5%',
+    borderRadius: 7,
+    borderWidth: 2,
+  },
 });
-
-const Login = (props: CustomProps) => {
-  return (
-    <View style={authStyle.backImgCustom}>
-      <View style={authStyle.authContainer}>
-        <Text style={authStyle.authTitle}>Autenticación</Text>
-        <TextInput
-          style={authStyle.authInput}
-          placeholder="Correo Electronico"
-          keyboardType="email-address"
-        />
-        <TextInput
-          style={authStyle.authInput}
-          placeholder="Contraseña"
-          keyboardType="visible-password"
-        />
-        <TouchableOpacity style={authStyle.authButton} onPress={() => {}}>
-          <Text style={authStyle.authButtonText}>Iniciar Sesión</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
-};
 
 export default Login;

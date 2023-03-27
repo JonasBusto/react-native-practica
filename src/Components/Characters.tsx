@@ -2,19 +2,14 @@ import React, {useState} from 'react';
 import {View, Text, Image} from 'react-native';
 import data from '../Helpers/data';
 
-const Pokedex = () => {
+const Characters = () => {
   const [pokedexArray, setPokedexArray] = useState([...data]);
 
   console.log(pokedexArray);
 
   return (
-    <View
-      style={{
-        marginTop: '5%',
-        borderColor: 'gray',
-        borderTopWidth: 1,
-      }}>
-      <Text>Pokedex</Text>
+    <View>
+      <Text>Personajes</Text>
       <View>
         {pokedexArray.map(e => (
           <View key={e.name + '-' + e.url}>
@@ -27,4 +22,4 @@ const Pokedex = () => {
   );
 };
 
-export default Pokedex;
+export default Characters;

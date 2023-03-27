@@ -61,12 +61,7 @@ const Counter = () => {
   const reiniciar = () => setCounter(0);
 
   return (
-    <View
-      style={{
-        marginTop: '5%',
-        borderColor: 'gray',
-        borderTopWidth: 1,
-      }}>
+    <View>
       <Text
         style={{
           marginTop: '2%',

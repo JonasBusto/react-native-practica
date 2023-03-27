@@ -1,30 +1,26 @@
 import React from 'react';
-import Hola from './src/Components/Hola';
-import Login from './src/Components/InputCustom';
+import Home from './src/Components/Home';
+import Login from './src/Components/Login';
 import Register from './src/Components/Register';
 import Counter from './src/Components/Counter';
-import Pokedex from './src/Components/Pokedex';
+import Characters from './src/Components/Characters';
 import {View, Text, Image, ScrollView, TextInput} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
-  const stylesCustomText = {
-    color: 'blue',
-    fontWeight: '700',
-    marginTop: '2%',
-    marginBottom: '5%',
-    textAlign: 'center',
-    textTransform: 'uppercase',
-  };
-
   return (
-    <ScrollView>
-      <Hola />
-      <Counter />
-      <Pokedex />
-      <Login object={stylesCustomText} />
-      <Register object={stylesCustomText} />
-    </ScrollView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Counter" component={Counter} />
+        <Stack.Screen name="Characters" component={Characters} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
