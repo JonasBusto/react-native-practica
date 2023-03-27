@@ -3,7 +3,9 @@ import Hola from './src/Components/Hola';
 import Login from './src/Components/InputCustom';
 import Register from './src/Components/Register';
 import Counter from './src/Components/Counter';
+import Pokedex from './src/Components/Pokedex';
 import {View, Text, Image, ScrollView, TextInput} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 function App(): JSX.Element {
   const stylesCustomText = {
@@ -19,6 +21,7 @@ function App(): JSX.Element {
     <ScrollView>
       <Hola />
       <Counter />
+      <Pokedex />
       <Login object={stylesCustomText} />
       <Register object={stylesCustomText} />
     </ScrollView>

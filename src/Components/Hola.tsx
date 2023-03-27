@@ -31,7 +31,7 @@ const Hola = () => {
           fontWeight: '700',
           fontSize: 20,
         }}>
-        Hola, estoy probando react native
+        Holad, estoy probando react native
       </Text>
       <Pressable style={styleButton} onPress={() => changeIcon()}>
         <Text
