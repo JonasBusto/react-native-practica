@@ -1,6 +1,7 @@
 import React from 'react';
 import Hola from './src/Components/Hola';
-import InputCustom from './src/Components/InputCustom';
+import Login from './src/Components/InputCustom';
+import Register from './src/Components/Register';
 import Counter from './src/Components/Counter';
 import {View, Text, Image, ScrollView, TextInput} from 'react-native';
 
@@ -8,16 +9,18 @@ function App(): JSX.Element {
   const stylesCustomText = {
     color: 'blue',
     fontWeight: '700',
-    fontSize: 20,
+    marginTop: '2%',
+    marginBottom: '5%',
     textAlign: 'center',
-    marginBottom: '4%',
+    textTransform: 'uppercase',
   };
 
   return (
     <ScrollView>
       <Hola />
-      <InputCustom object={stylesCustomText} />
       <Counter />
+      <Login object={stylesCustomText} />
+      <Register object={stylesCustomText} />
     </ScrollView>
   );
 }

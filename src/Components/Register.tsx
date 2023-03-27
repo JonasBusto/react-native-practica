@@ -18,10 +18,10 @@ const authStyle = StyleSheet.create({
     width: '100%',
     borderColor: 'gray',
     borderTopWidth: 1,
-    backgroundColor: 'rgba(73,171,255,1)',
+    backgroundColor: 'rgba(0,20,31,1)',
   },
   authContainer: {
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    backgroundColor: 'rgba(255,255,255,0.2)',
     width: '85%',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -48,7 +48,7 @@ const authStyle = StyleSheet.create({
     fontSize: 15,
   },
   authButton: {
-    backgroundColor: 'rgba(216,74,0,1)',
+    backgroundColor: 'rgba(232,123,18,1)',
     width: '40%',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -66,11 +66,11 @@ const authStyle = StyleSheet.create({
   },
 });
 
-const Login = (props: CustomProps) => {
+const Register = (props: CustomProps) => {
   return (
     <View style={authStyle.backImgCustom}>
       <View style={authStyle.authContainer}>
-        <Text style={authStyle.authTitle}>Autenticación</Text>
+        <Text style={authStyle.authTitle}>Registro</Text>
         <TextInput
           style={authStyle.authInput}
           placeholder="Correo Electronico"
@@ -78,15 +78,25 @@ const Login = (props: CustomProps) => {
         />
         <TextInput
           style={authStyle.authInput}
+          placeholder="Nombre completo"
+          keyboardType="default"
+        />
+        <TextInput
+          style={authStyle.authInput}
           placeholder="Contraseña"
           keyboardType="visible-password"
         />
+        <TextInput
+          style={authStyle.authInput}
+          placeholder="Confirmar contraseña"
+          keyboardType="visible-password"
+        />
         <TouchableOpacity style={authStyle.authButton} onPress={() => {}}>
-          <Text style={authStyle.authButtonText}>Iniciar Sesión</Text>
+          <Text style={authStyle.authButtonText}>Registrarse</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 };
 
-export default Login;
+export default Register;

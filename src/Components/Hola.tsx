@@ -16,7 +16,7 @@ const Hola = () => {
   const changeIcon = () => setShow(!show);
 
   useEffect(() => {
-    console.log('show es: ', show);
+    // console.log('show es: ', show);
   }, [show]);
 
   return (
@@ -55,8 +55,8 @@ const Hola = () => {
             height: 200,
             marginLeft: 'auto',
             marginRight: 'auto',
-            marginBottom: '10%',
-            marginTop: '10%',
+            marginTop: '5%',
+            marginBottom: '5%',
           }}
         />
       ) : (
@@ -69,8 +69,8 @@ const Hola = () => {
             height: 200,
             marginLeft: 'auto',
             marginRight: 'auto',
-            marginBottom: '10%',
-            marginTop: '10%',
+            marginTop: '5%',
+            marginBottom: '5%',
           }}
         />
       )}
