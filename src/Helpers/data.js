@@ -1,82 +1,102 @@
 export default [
   {
-    name: 'bulbasaur',
-    url: 'https://pokeapi.co/api/v2/pokemon/1/',
+    name: 'Toad',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/toad_super_mario_bros_icon_232934.png',
   },
   {
-    name: 'ivysaur',
-    url: 'https://pokeapi.co/api/v2/pokemon/2/',
+    name: 'Super Luigi',
+    url: '',
   },
   {
-    name: 'venusaur',
-    url: 'https://pokeapi.co/api/v2/pokemon/3/',
+    name: 'Super Mario',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/mario_super_bros_icon_232936.png',
   },
   {
-    name: 'charmander',
-    url: 'https://pokeapi.co/api/v2/pokemon/4/',
+    name: 'Bowser',
+    url: 'https://i.imgur.com/II0QRbF.png',
   },
   {
-    name: 'charmeleon',
-    url: 'https://pokeapi.co/api/v2/pokemon/5/',
+    name: 'Peach',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/peach_princess_super_mario_bros_icon_232944.png',
   },
   {
-    name: 'charizard',
-    url: 'https://pokeapi.co/api/v2/pokemon/6/',
+    name: 'Luigi',
+    url: '',
   },
   {
-    name: 'squirtle',
-    url: 'https://pokeapi.co/api/v2/pokemon/7/',
+    name: 'Mario',
+    url: '',
   },
   {
-    name: 'wartortle',
-    url: 'https://pokeapi.co/api/v2/pokemon/8/',
+    name: 'Goomba',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/goomba_super_mario_bros_icon_232943.png',
   },
   {
-    name: 'blastoise',
-    url: 'https://pokeapi.co/api/v2/pokemon/9/',
+    name: 'Koopa Para-Troopa',
+    url: '',
   },
   {
-    name: 'caterpie',
-    url: 'https://pokeapi.co/api/v2/pokemon/10/',
+    name: 'Bullet Bill',
+    url: '',
   },
   {
-    name: 'metapod',
-    url: 'https://pokeapi.co/api/v2/pokemon/11/',
+    name: 'Buzzy Beetle',
+    url: '',
   },
   {
-    name: 'butterfree',
-    url: 'https://pokeapi.co/api/v2/pokemon/12/',
+    name: 'Blooper',
+    url: '',
   },
   {
-    name: 'weedle',
-    url: 'https://pokeapi.co/api/v2/pokemon/13/',
+    name: 'Hammer Bro',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/hammer_bro_super_mario_bros_icon_232939.png',
   },
   {
-    name: 'kakuna',
-    url: 'https://pokeapi.co/api/v2/pokemon/14/',
+    name: 'Cheep Cheep',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/fish_cheep_super_mario_bros_icon_232935.png',
   },
   {
-    name: 'beedrill',
-    url: 'https://pokeapi.co/api/v2/pokemon/15/',
+    name: 'Koopa Troopa',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/turtle_koopa_super_mario_bros_icon_232948.png',
   },
   {
-    name: 'pidgey',
-    url: 'https://pokeapi.co/api/v2/pokemon/16/',
+    name: 'Spiny',
+    url: '',
   },
   {
-    name: 'pidgeotto',
-    url: 'https://pokeapi.co/api/v2/pokemon/17/',
+    name: '1-Up Mushroom',
+    url: '',
   },
   {
-    name: 'pidgeot',
-    url: 'https://pokeapi.co/api/v2/pokemon/18/',
+    name: 'Koopa Troopa',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/turtle_koopa_super_mario_bros_icon_232947.png',
   },
   {
-    name: 'rattata',
-    url: 'https://pokeapi.co/api/v2/pokemon/19/',
+    name: 'Lava Bubble',
+    url: '',
   },
   {
-    name: 'raticate',
-    url: 'https://pokeapi.co/api/v2/pokemon/20/',
+    name: 'Cloud',
+    url: '',
+  },
+  {
+    name: 'Lakitu',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/lakitu_super_mario_bros_icon_232945.png',
+  },
+  {
+    name: 'Flower Mario',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/flower_mario_power_super_bros_icon_232941.png',
+  },
+  {
+    name: '? Block',
+    url: '',
+  },
+  {
+    name: 'Goomba Lava',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/goomba_super_mario_bros_icon_232940.png',
+  },
+  {
+    name: 'Goomba Night',
+    url: 'https://cdn.icon-icons.com/icons2/3797/PNG/512/goomba_super_mario_bros_icon_232938.png',
   },
 ];

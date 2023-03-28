@@ -33,6 +33,11 @@ const Hola = ({navigation}: any) => {
           <Text style={homeStyle.btnText}>Personajes</Text>
         </TouchableOpacity>
       </View>
+      <TouchableOpacity
+        style={homeStyle.btnNav}
+        onPress={() => navigation.navigate('Game-1')}>
+        <Text style={homeStyle.btnText}>Adivina el número</Text>
+      </TouchableOpacity>
       <Text
         style={{
           marginLeft: 'auto',
