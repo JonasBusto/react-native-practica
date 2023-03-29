@@ -10,10 +10,8 @@ import {
 } from 'react-native';
 import data from '../Helpers/data';
 
-const Characters = () => {
-  const [pokedexArray, setPokedexArray] = useState([...data]);
-
-  console.log(pokedexArray);
+const Characters = ({navigation}: any) => {
+  const [arrayData, setArrayData] = useState([...data]);
 
   return (
     <ScrollView>
@@ -24,12 +22,13 @@ const Characters = () => {
         style={charactersStyle.container}>
         <Text style={charactersStyle.title}>Personajes</Text>
         <View style={charactersStyle.viewContainerCharacter}>
-          {pokedexArray.map(
+          {arrayData.map(
             e =>
               e.url.trim() !== '' && (
                 <TouchableOpacity
                   style={charactersStyle.viewCharacter}
-                  key={e.name + '-' + e.url}>
+                  key={e.name + '-' + e.url}
+                  onPress={() => navigation.navigate('Character', {id: e.id})}>
                   <Image
                     style={charactersStyle.imgStyle}
                     source={{
