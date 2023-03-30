@@ -8,41 +8,46 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import {Formik} from 'formik';
 
 const Register = ({navigation}: any) => {
   return (
     <View style={authStyle.backImgCustom}>
-      <View style={authStyle.authContainer}>
-        <Text style={authStyle.authTitle}>Registro</Text>
-        <TextInput
-          style={authStyle.authInput}
-          placeholder="Correo Electronico"
-          keyboardType="email-address"
-        />
-        <TextInput
-          style={authStyle.authInput}
-          placeholder="Nombre completo"
-          keyboardType="default"
-        />
-        <TextInput
-          style={authStyle.authInput}
-          placeholder="Contraseña"
-          keyboardType="visible-password"
-        />
-        <TextInput
-          style={authStyle.authInput}
-          placeholder="Confirmar contraseña"
-          keyboardType="visible-password"
-        />
-        <TouchableOpacity style={authStyle.authButton} onPress={() => {}}>
-          <Text style={authStyle.authButtonText}>Registrarse</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={authStyle.btnLogin}
-          onPress={() => navigation.navigate('Login')}>
-          <Text style={authStyle.authButtonText}>O Inicia Sesión aquí</Text>
-        </TouchableOpacity>
-      </View>
+      <Formik
+        initialValues={{email: ''}}
+        onSubmit={values => console.log(values)}>
+        <View style={authStyle.authContainer}>
+          <Text style={authStyle.authTitle}>Registro</Text>
+          <TextInput
+            style={authStyle.authInput}
+            placeholder="Correo Electronico"
+            keyboardType="email-address"
+          />
+          <TextInput
+            style={authStyle.authInput}
+            placeholder="Nombre completo"
+            keyboardType="default"
+          />
+          <TextInput
+            style={authStyle.authInput}
+            placeholder="Contraseña"
+            keyboardType="visible-password"
+          />
+          <TextInput
+            style={authStyle.authInput}
+            placeholder="Confirmar contraseña"
+            keyboardType="visible-password"
+          />
+          <TouchableOpacity style={authStyle.authButton} onPress={() => {}}>
+            <Text style={authStyle.authButtonText}>Registrarse</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={authStyle.btnLogin}
+            onPress={() => navigation.navigate('Login')}>
+            <Text style={authStyle.authButtonText}>O Inicia Sesión aquí</Text>
+          </TouchableOpacity>
+        </View>
+      </Formik>
     </View>
   );
 };
