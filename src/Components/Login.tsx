@@ -8,31 +8,85 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import {Formik} from 'formik';
 
 const Login = ({navigation}: any) => {
   return (
     <View style={authStyle.backImgCustom}>
-      <View style={authStyle.authContainer}>
-        <Text style={authStyle.authTitle}>Autenticación</Text>
-        <TextInput
-          style={authStyle.authInput}
-          placeholder="Correo Electronico"
-          keyboardType="email-address"
-        />
-        <TextInput
-          style={authStyle.authInput}
-          placeholder="Contraseña"
-          keyboardType="visible-password"
-        />
-        <TouchableOpacity style={authStyle.authButton} onPress={() => {}}>
-          <Text style={authStyle.authButtonText}>Iniciar Sesión</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={authStyle.btnRegister}
-          onPress={() => navigation.navigate('Register')}>
-          <Text style={authStyle.authButtonText}>O registrate aquí</Text>
-        </TouchableOpacity>
-      </View>
+      <Formik
+        initialValues={{email: '', pass: ''}}
+        validate={values => {
+          let errors: Record<string, any> = {};
+
+          if (values.email.trim() === '') {
+            errors.email = 'Requerido';
+          } else if (
+            !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
+              values.email,
+            )
+          ) {
+            errors.email = 'Dirección de Email invalida';
+          }
+
+          if (values.pass.trim() === '') {
+            errors.pass = 'Requerido';
+          } else if (/\s/.test(values.pass)) {
+            errors.pass = 'La contraseña no puede tener espacios';
+          } else if (
+            values.pass.split('').length < 6 ||
+            values.pass.split('').length > 14
+          ) {
+            errors.pass = 'Contraseña entre 6 y 14 caracteres';
+          }
+
+          return errors;
+        }}
+        onSubmit={values => console.log(values)}>
+        {({
+          handleSubmit,
+          errors,
+          touched,
+          values,
+          handleChange,
+          handleBlur,
+        }) => (
+          <View style={authStyle.authContainer}>
+            <Text style={authStyle.authTitle}>Autenticación</Text>
+            <TextInput
+              style={authStyle.authInput}
+              placeholder="Correo Electronico"
+              keyboardType="email-address"
+              onChangeText={handleChange('email')}
+              onBlur={handleBlur('email')}
+              value={values.email}
+            />
+            {touched.email && errors.email && (
+              <Text style={authStyle.authValidateInput}>{errors.email}</Text>
+            )}
+            <TextInput
+              style={authStyle.authInput}
+              placeholder="Contraseña"
+              secureTextEntry
+              onChangeText={handleChange('pass')}
+              onBlur={handleBlur('pass')}
+              value={values.pass}
+            />
+            {touched.pass && errors.pass && (
+              <Text style={authStyle.authValidateInput}>{errors.pass}</Text>
+            )}
+            <TouchableOpacity
+              style={authStyle.authButton}
+              onPress={() => handleSubmit()}>
+              <Text style={authStyle.authButtonText}>Iniciar Sesión</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={authStyle.btnRegister}
+              onPress={() => navigation.navigate('Register')}>
+              <Text style={authStyle.authButtonText}>O registrate aquí</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+      </Formik>
     </View>
   );
 };
@@ -61,9 +115,15 @@ const authStyle = StyleSheet.create({
     marginLeft: '5%',
     marginRight: '5%',
     marginTop: '2%',
-    marginBottom: '2%',
     backgroundColor: 'rgba(255,255,255,0.95)',
-    color: 'white',
+    color: 'black',
+  },
+  authValidateInput: {
+    color: 'red',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    marginBottom: '2%',
+    marginLeft: 20,
   },
   authTitle: {
     color: 'white',
